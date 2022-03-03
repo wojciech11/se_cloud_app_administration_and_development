@@ -1,0 +1,402 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Budowa i Administracja Aplikacji w Chmurze</title>
+
+		<!-- bootstrap -->
+		<link rel="stylesheet" href="ext/bootstrap-5.1.3-dist/css/bootstrap.css">
+		<!-- -->
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+
+		<!-- remove annoying shadow around images -->
+		<style>
+			.reveal section img {
+				background-color:white;
+				border:0;
+				box-shadow: 0 0 0 0;
+			}
+		</style>
+		<!-- -->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<!-- p>U<span style="text-transform: lowercase;">sługi i platformy dew dla aplikacji<br /> w Chmurze</span></p -->
+
+					<h3>C<span style="text-transform: lowercase;">o to jest administracja</span><br/></h3>
+					<br />
+
+					<h6><small>W<span style="text-transform: lowercase;">ojciech</span> B<span style="text-transform: lowercase;">arczyński</span> <br />
+							<span style="text-transform: lowercase;">wojciech.barczynski@wsb.wroclaw.pl</span></small>
+				</section>
+
+
+				<section data-markdown>
+					<script type="text/template">
+### Ć<span style="text-transform: lowercase;">wiczenia</span>
+
+- Problem
+- Mierzymy się z zadaniem samemu - timebox
+- Pytamy / prosimy o pomoc.
+- Zrobiłam / Zrobiłem - warto pokazać
+- Bez Kopiuj&Wklej (chyba, że wykładowca powie inaczej)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### Ć<span style="text-transform: lowercase;">wiczenia</span>
+
+Czym więcej pytanie, tym więcej możecie się nauczyć.
+					</script>
+				</section>
+
+				<section>
+					<h3>H<span style="text-transform: lowercase;">igh performance teams</span></h3>
+					<div class="container">
+						<div class="row">
+							<div class='col-md-6'>
+								<p>(Tech) metrics:</p>
+								<ul>
+									<li>Lead Time</li>
+									<li>Deployment frequency</li>
+									<li>Mean time to Recovery</li>
+									<li>Change Fail Percent</li>
+								</ul>
+							</div>
+							<div class='col-md-6'>
+								<img width="100%" style="object-fit: fill;" src="img/laptop_book_accelarate.png" />
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### A<span style="text-transform: lowercase;">dministracja</span>
+
+- Archaicznie
+- Klasycznie
+- Pomiędzy
+- Niezależne zespoły
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### A<span style="text-transform: lowercase;">rchaicznie</span>
+
+- bez żadnego Instrastructure-as-a-Code
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### Z<span style="text-transform: lowercase;">auważ</span>
+
+- nie musimy mieć od dnia 0 wszystkiego zautomtyzowanego
+
+
+<p><small>Więcej o <a href="https://github.com/wojciech12/talk_bitconf_best_practices_introducing_k8s_and_CN/blob/master/slides.pdf">automatyzacji</a></small></p>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### R<span style="text-transform: lowercase;">yzyka automatyzacji</span>
+
+?
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### K<span style="text-transform: lowercase;">lasycznie</span>
+
+- Walled garden
+- Praca oparta o tickety
+- Osobne zespoły
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### K<span style="text-transform: lowercase;">lasycznie</span>
+
+Stereotypy - Developerzy:
+
+<code>aaaaadministracja/*Ops no thank you</code>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### K<span style="text-transform: lowercase;">lasycznie</span>
+
+Stereotypy - druga strona - *Ops/System Engineers:
+
+<code>co oni wiedzą o życiu<br />(bezpieczeństwo, resilience...)?</code>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### P<span style="text-transform: lowercase;">omiędzy</span>
+
+- Delegacja *Ops / administratorów do zespołów
+- Praca oparte o repozytorium git (Infra-as-a-Code)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### P<span style="text-transform: lowercase;">omiędzy</span>
+
+Lepiej:
+
+- Część rzeczy przejmuje zespół (n.p., infra champion)
+- Część IaC może być modyfikowana i aplikowana przez zespół
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### P<span style="text-transform: lowercase;">omiędzy</span>
+
+Lepiej:
+
+- automatyzacja IaC
+- automatyzacja otwiera kod, który wymaga wyższych uprawnień
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### G<span style="text-transform: lowercase;">dzie podążamy</span>
+
+- zespoły mają wszystkie umiejętności
+- devOps / System Engineers są działem wspierającym
+- automatyzacja pomaga uniknąc zbyt szerokich uprawnień w produkcji
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### G<span style="text-transform: lowercase;">dzie podążamy</span>
+
+- Developer Experience teams
+- Developer portals
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### G<span style="text-transform: lowercase;">dzie podążamy</span>
+
+Oczekujemy:
+
+- Świadomości operacyjnej strony przez programistów
+- Świadomości oprogramowania od system inżynierów / devOps
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### O<span style="text-transform: lowercase;">becna systuacja</span>
+
+Trudno znaleźć na rynku (Cloud) System Engineerów:
+
+- jak powyżej, staramy się efektywnie wykorzystać ich wiedzę
+- wykorzystujemy X-as-a-service lub startujemy od XaaS z minimalną administracją
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+# A<span style="text-transform: lowercase;">dministracja / Strona operacyjna</span>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### A<span style="text-transform: lowercase;">dministracja</span>
+
+Administracja / Operowanie:
+
+- bazy danych
+- uprawnień
+- kosztów
+- utrzymanie
+- skalowanie
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+## O<span style="text-transform: lowercase;">bservability</span>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### O<span style="text-transform: lowercase;">bservability</span>
+
+- monitoring
+- logging / error monitoring
+- tracing
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### O<span style="text-transform: lowercase;">bservability</span>
+
+<img src="img/observability/observability_capex_vs_opex_from_golang_prod_blog.png" width="80%" />
+
+<small><a href="https://peter.bourgon.org/go-for-industrial-programming/">Go for Industrial Programming by Peter Bourgon</a></small>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### M<span style="text-transform: lowercase;">onitoring</span>
+
+Nawet jak zaczniemy tak:
+
+<img src="img/observability/rubber_duck_monolit.jpg" width="60%" />
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### M<span style="text-transform: lowercase;">onitoring</span>
+
+Dużo ruchomych elementów:
+
+<img src="img/observability/rubber_duck_microservices.jpg" width="60%" />
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### M<span style="text-transform: lowercase;">onitoring</span>
+
+- [RED](https://www.infoworld.com/article/3638693/the-red-method-a-new-strategy-for-monitoring-microservices.html) / [4 Golden Signals](https://sre.google/sre-book/monitoring-distributed-systems/#xref_monitoring_golden-signals)
+- [USE](https://www.brendangregg.com/usemethod.html)
+- Business metrics
+- How our customers [experience](https://requestmetrics.com/web-performance/measure-web-performance) our product
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### M<span style="text-transform: lowercase;">onitoring</span>
+
+- [RED](https://github.com/wojciech12/workshop_kubernetes_and_cloudnative/blob/master/04_app_development/slides/index.pdf)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### L<span style="text-transform: lowercase;">ogging</span>
+
+Odpowiedzialność całego zespołu inż:
+
+- Structured log
+- Common tags
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### L<span style="text-transform: lowercase;">ogging</span>
+
+- Datadog (SaaS)
+- Elasticsearch-Fluentd-Kibana
+- [Grafana Loki](https://grafana.com/oss/loki/)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### E<span style="text-transform: lowercase;">rror</span> M<span style="text-transform: lowercase;">onitoring</span>
+
+- [Sentry](https://sentry.io/)
+- [bugsnag](https://www.bugsnag.com/)
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### T<span style="text-transform: lowercase;">racing</span>
+
+Pamiętajmy:
+
+- Standardowe tagi
+- Dbanie ich poprowianie
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### W<span style="text-transform: lowercase;">asz projekt</span>
+
+- Proszę zadbać o ustrukturyzowane logowanie w swojej aplikacji.
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+### W<span style="text-transform: lowercase;">asz projekt</span>
+
+Przykładowe biblioteki:
+
+- [opentelemetry](https://opentelemetry.io)
+- [Python](https://www.structlog.org/en/stable/)
+- [Golang](https://github.com/uber-go/zap)
+- [dotnet core](https://serilog.net/), java
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+## P<span style="text-transform: lowercase;">ytania?</span>
+					</script>
+				</section>
+
+				<section data-markdown>
+					<script type="text/template">
+## B<span style="text-transform: lowercase;">ackup</span>
+					</script>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
