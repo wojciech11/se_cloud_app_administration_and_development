@@ -26,15 +26,17 @@
    - Prometheus
    - Logging
 
-3. Infrastructure-as-a-Code:
+3. Observability część 2 oraz praca nad swoim projektem:
+
+   - Tracing
+
+4. Infrastructure-as-a-Code:
 
    - Terraform and Terragrunt
    - Pulumi
    - Ansible
 
-4. TBA
-
-5. TBA
+5. Podsumowanie i Egzamin
 
 ## Materiały dodatkowe
 
