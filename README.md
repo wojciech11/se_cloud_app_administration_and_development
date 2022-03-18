@@ -26,15 +26,17 @@
    - Prometheus
    - Logging
 
-3. Observability część 2 oraz praca nad swoim projektem:
+3. Observability część 2 oraz praca nad swoim projektem - [ćwiczenia](03_exercise/README.md):
 
    - Tracing
+   - Projekt
 
 4. Infrastructure-as-a-Code:
 
-   - Terraform and Terragrunt
+   - Terraform and Terragrunt / infracost / tflint / tfsec
    - Pulumi
    - Ansible
+   - Dedicated tools
 
 5. Podsumowanie i Egzamin
 

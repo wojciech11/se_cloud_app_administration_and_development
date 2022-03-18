@@ -1,0 +1,28 @@
+version: '3'
+services:
+  order-manager:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    volumes:
+      -  ./main.py:/srv/main.py
+    links:
+      - jaeger:jaeger
+  jaeger:
+    image: jaegertracing/all-in-one:1.32
+    environment:
+      - "COLLECTOR_ZIPKIN_HOST_PORT=:9411"    
+    ports:
+      - 5775:5775/udp
+      - 5775:5775/udp
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 5778:5778
+      - 16686:16686
+      - 14250:14250
+      - 14268:14268
+      - 14269:14269
+      - 9411:9411
+    links:
+      - order-manager:order-manager
