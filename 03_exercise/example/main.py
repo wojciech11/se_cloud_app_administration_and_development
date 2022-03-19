@@ -94,9 +94,7 @@ def mocked_call(what, sleep, is_error):
 
 def get_tracer(service_name, jaeger_host):
     trace.set_tracer_provider(
-        TracerProvider(
-            resource=Resource.create({SERVICE_NAME: service_name})
-        )
+        TracerProvider(resource=Resource.create({SERVICE_NAME: service_name}))
     )
     tracer = trace.get_tracer(service_name)
 
@@ -110,10 +108,10 @@ def get_tracer(service_name, jaeger_host):
     span_processor = BatchSpanProcessor(jaeger_exporter)
 
     # add to the tracer, for debugging if needed
-    # 
-    # 
+    #
+    #
     # from opentelemetry.sdk.trace.export import (SimpleSpanProcessor, ConsoleSpanExporter)
-    # 
+    #
     # SimpleSpanProcessor(ConsoleSpanExporter())
     trace.get_tracer_provider().add_span_processor(span_processor)
     return tracer
