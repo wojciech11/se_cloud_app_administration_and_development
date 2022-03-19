@@ -35,3 +35,5 @@
 - [GCP i OT](https://cloud.google.com/trace/docs/setup/python-ot)
 - [Azure i OT](https://docs.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-overview)
 - https://httpbin.org
+- https://github.com/magsther/awesome-opentelemetry
+
