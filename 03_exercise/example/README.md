@@ -17,7 +17,7 @@ source .venv/bin/activate
 
 ```bash
 # start all-jeager
-docker-compose up jaeger -d
+docker-compose up -d jaeger
 
 export JAEGER_HOST=127.0.0.1
 make run
