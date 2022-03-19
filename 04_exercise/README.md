@@ -132,3 +132,5 @@ Narzędzia - docker:
   # zeskanujmy stary obraz dockera
   trivy image python:2
   ```
+
+## Materiały Dodatkowe

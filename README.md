@@ -34,8 +34,8 @@
 4. Infrastructure-as-a-Code:
 
    - Terraform and Terragrunt / infracost / tflint / tfsec
-   - Pulumi
    - Ansible
+   - Pulumi
    - Dedicated tools
 
 5. Podsumowanie i Egzamin
