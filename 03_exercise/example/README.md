@@ -1,8 +1,8 @@
-# Python && OpenTracing
+# Python && Tracing with OpenTelemetry
 
 ## Demo
 
-*Please for your notes*
+*Please add your notes*
 
 ```bash
 ```
