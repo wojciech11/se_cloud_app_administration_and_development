@@ -4,7 +4,7 @@ docker_build:
 	docker-compose -f docker-compose.yaml --project-name $(PROJECT_NAME) build && \
 	docker tag ${PROJECT_NAME}_order-manager wojciech12/$(PROJECT_NAME)
 
-#gunicorn --bind 0.0.0.0:8080 -w 1 wsgi:app
+# gunicorn --bind 0.0.0.0:8080 -w 1 wsgi:app
 run:
 	python3 main.py
 
