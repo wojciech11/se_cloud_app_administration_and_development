@@ -40,6 +40,7 @@
 
 5. Podsumowanie i Egzamin:
 
+   - runbooks
    - onCall
    - incident management
 
