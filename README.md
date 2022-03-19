@@ -38,7 +38,10 @@
    - Pulumi
    - Dedicated tools
 
-5. Podsumowanie i Egzamin
+5. Podsumowanie i Egzamin:
+
+   - onCall
+   - incident management
 
 ## Materiały dodatkowe
 
