@@ -34,6 +34,6 @@
 - [AWS i OT](https://aws.amazon.com/blogs/opensource/auto-instrumenting-a-python-application-with-an-aws-distro-for-opentelemetry-lambda-layer/)
 - [GCP i OT](https://cloud.google.com/trace/docs/setup/python-ot)
 - [Azure i OT](https://docs.microsoft.com/en-us/azure/azure-monitor/app/opentelemetry-overview)
-- https://httpbin.org
+- https://httpbin.org (przydatne w [testowaniu i nauce](https://github.com/wojciech11/se_http_api_testing_quickstart))
 - https://github.com/magsther/awesome-opentelemetry
 
