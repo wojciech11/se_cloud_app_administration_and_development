@@ -31,7 +31,7 @@
    - Tracing
    - Projekt
 
-4. Infrastructure-as-a-Code:
+4. Infrastructure-as-a-Code - [ćwiczenia](04_exercise/README.md):
 
    - Terraform and Terragrunt / infracost / tflint / tfsec
    - Ansible
