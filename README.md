@@ -35,7 +35,6 @@
 
    - Terraform and Terragrunt / infracost / tflint / tfsec
    - Ansible
-   - Pulumi
    - Dedicated tools
 
 5. Podsumowanie i Egzamin:

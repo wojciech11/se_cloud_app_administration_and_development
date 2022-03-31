@@ -131,7 +131,6 @@
 
 8. Zanim zaplikujesz plan, wykorzystaj nowe narzędzia, aby poznać koszt naszej nowej infrastruktury:
 
-
    ```bash
    # let's store our plan in a file
    terraform plan -out plan.cache
@@ -140,22 +139,21 @@
 
 9. A co z najlepszymi praktykami bezpieczeństwa? Skorzystajmy z `tfsec`: 
 
-
    ```bash
    tfsec .
    ```
 
 10. Apply:
 
-   ```bash
-   terraform apply
-   ```
+    ```bash
+    terraform apply
+    ```
 
 11. Zaloguj się do swojej maszyny:
 
-   ```bash
-   ssh ubuntu@X.Y.Z.V
-   ```
+    ```bash
+    ssh ubuntu@X.Y.Z.V
+    ```
 
 12. Dodaj tagi ([azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json), [aws](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)) do swojej wirtualnej maszyny.
 
@@ -168,12 +166,11 @@
 
 15. Usuńmy wszystko:
 
-   ```bash
-   terraform destroy
-   ```
+    ```bash
+    terraform destroy
+    ```
 
 Zauważ: Moglibyśmy również zainstalować wymagane pakiety z poziomu Terraforma posługując się *Provisioner*, na przykład, [remote-exec](https://www.terraform.io/docs/language/resources/provisioners/remote-exec.html). Więcej informacji znajdziesz w [dokumentacji](https://www.terraform.io/docs/language/resources/provisioners/syntax.html).
-
 
 ## Ansible
 
