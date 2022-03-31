@@ -1,15 +1,25 @@
-# Infrastructure-as-a-Code + Narzędzia [Draft]
+# Infrastructure-as-a-Code
 
 ## Terraform
 
-State-of-the-art. Obecnie Terraform i Terragrunt uznawane za najlepsze narzędzie dla Infrastructure-as-a-Code.
+0. Zaloguj się na portal Azure-a:
+
+   ```bash
+   az login --use-device-code
+   ```
 
 1. Zainstaluj terraform na twoim komputerze według [instrukcji](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
-2. Korzystając z dokumentacji [Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+2. Zainstaluje następujące narzędzia:
+
+   - [infracost](https://www.infracost.io/docs/)
+   - [tflint](https://github.com/terraform-linters/tflint)
+   - [tfsec](https://github.com/aquasecurity/tfsec)
+
+3. Korzystając z dokumentacji [Azure Provider](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
 ) i [przykładów](https://github.com/hashicorp/terraform-provider-azurerm/tree/main/examples/virtual-machines), utwórzmy w następnych krokach maszynę wirtualną.
 
-3. Przygotuj projekt.
+4. Przygotuj projekt.
 
    ```bash
    mkdir azure-tf
@@ -17,7 +27,7 @@ State-of-the-art. Obecnie Terraform i Terragrunt uznawane za najlepsze narzędzi
    touch main.tf
    ```
 
-4. Do `main.tf` przekopiuj definicję providera ([na podstawie przykładu](https://github.com/hashicorp/terraform-provider-azurerm/tree/main/examples/virtual-machines/linux/basic-password)):
+5. Do `main.tf` przekopiuj definicję providera ([na podstawie przykładu](https://github.com/hashicorp/terraform-provider-azurerm/tree/main/examples/virtual-machines/linux/basic-password)):
 
    ```terraform
    provider "azurerm" {
@@ -31,7 +41,7 @@ State-of-the-art. Obecnie Terraform i Terragrunt uznawane za najlepsze narzędzi
    terraform init
    ```
 
-5. Do `main.tf` przekopuj kilka zasobów i uruchom `terraform plan`,
+6. Do `main.tf` przekopuj kilka zasobów i uruchom `terraform plan`,
 
    ```terraform
    provider "azurerm" {
@@ -86,7 +96,7 @@ State-of-the-art. Obecnie Terraform i Terragrunt uznawane za najlepsze narzędzi
      name                            = "wsb-vm"
      resource_group_name             = azurerm_resource_group.main.name
      location                        = azurerm_resource_group.main.location
-     size                            = "Standard_B1ls"
+     size                            = "Standard_B9ls"
      admin_username                  = "ubuntu"
      admin_password                  = var.password
      disable_password_authentication = false
@@ -108,15 +118,71 @@ State-of-the-art. Obecnie Terraform i Terragrunt uznawane za najlepsze narzędzi
    }
    ```
 
-4. Narzędzia - [tflint](https://github.com/terraform-linters/tflint)
+   Niezwykle pomocną komendą jest również `terraform fmt`.
 
-5. Narzędzia - [tfsec](https://github.com/aquasecurity/tfsec)
 
-6. Narzędzia - [infracost](https://github.com/infracost/infracost):
+7. A co z jakością naszego Terraforma? `tflint` przychodzi z pomocą. Możemy zainstalować krok po kroku, jak to jest opisane na [githubie projektu](docker pull ghcr.io/terraform-linters/tflint-bundle:latest), albo skorzystać z dockera:
 
-## Docker
+   ```bash
+   docker run --rm -v $(pwd):/data -t ghcr.io/terraform-linters/tflint-bundle
+   ```
 
-Narzędzia - docker:
+   Popraw błąd, zanim przejdziesz dalej.
+
+8. Zanim zaplikujesz plan, wykorzystaj nowe narzędzia, aby poznać koszt naszej nowej infrastruktury:
+
+   ```bash
+   # let's store our plan in a file
+   terraform plan -out plan.cache
+   infracost breakdown --path plan.cache
+    ```
+
+9. A co z najlepszymi praktykami bezpieczeństwa? Skorzystajmy z `tfsec`: 
+
+   ```bash
+   tfsec .
+   ```
+
+   Sprawdź też [checkov](https://github.com/bridgecrewio/checkov/).
+
+10. Apply:
+
+    ```bash
+    terraform apply
+    ```
+
+11. Zaloguj się do swojej maszyny:
+
+    ```bash
+    ssh ubuntu@X.Y.Z.V
+    ```
+
+12. Dodaj tagi ([azure](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/tag-resources?tabs=json), [aws](https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html)) do swojej wirtualnej maszyny.
+
+13. Usuń tylko definicję maszyny wirtualnej z `main.tf` i wywołaj `terraform apply`.
+
+14. Dodatkowe:
+
+   - wyświetlij IP address z pomocą [outputs](https://www.terraform.io/docs/language/values/outputs.html)
+   - generacja hasła z [password resource](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/password)
+
+15. Usuńmy wszystko:
+
+    ```bash
+    terraform destroy
+    ```
+
+Zauważ: Moglibyśmy również zainstalować wymagane pakiety z poziomu Terraforma posługując się *Provisioner*, na przykład, [remote-exec](https://www.terraform.io/docs/language/resources/provisioners/remote-exec.html). Więcej informacji znajdziesz w [dokumentacji](https://www.terraform.io/docs/language/resources/provisioners/syntax.html).
+
+## Ansible
+
+Ansible jest popularnym narzędziem do przygotowania zasobów chmurowych, np., zainstowanie pakietów oraz administracji, np., wykonywania równolegle operacji na wszystkich wirtualnych maszynach. Często ansible wykorzystuje się do zrealizowania ostatniego kroku w Continuous Deployment, jeśli infrastructura jest oparta o wirtualne maszyny.
+
+1. Utwórz wirtualną maszynę za pomoca TF.
+
+2. Zrób następujący tutorial: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-html-website-with-ansible-on-ubuntu-20-04-nginx
+
+## Docker - nardzędzia
 
 - dockerfile lint:
 
@@ -133,4 +199,7 @@ Narzędzia - docker:
   trivy image python:2
   ```
 
-## Materiały Dodatkowe
+## Dodatkowe materiały
+
+- https://github.com/bridgecrewio/yor
+- https://docs.spacelift.io/concepts/policy/terraform-plan-policy
