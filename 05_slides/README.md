@@ -2,16 +2,33 @@
 
 ## Oncall
 
+Small / medium company:
+
+1. Level1
+2. Level2
+3. Whole team
+
+Tools:
+
+- Opsgenie
+- Pagerduty
+
+TODO: training, ...
+
+see [Practice of Cloud System Administration vol2](https://www.amazon.com/Practice-Cloud-System-Administration-Practices/dp/032194318X).
+
 ## Runbook
 
 ## Incident Management
+
+Incident management skills and practices exist to channel the energies of enthusiastic individuals.
 
 ```mermaid
 flowchart
   I(Incident) -. Well defined process .->l
   l(Incident\nCommander) --> H(Communication\n Manager)
   l --> D(Direct\nContributor/s)
-  l --> C(Communication\nChannel)
+  l --> C[[Communication\nChannel]]
 ```
 
 Roles:
