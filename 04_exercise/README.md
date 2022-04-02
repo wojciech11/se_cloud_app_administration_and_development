@@ -191,7 +191,9 @@ Ansible jest popularnym narzędziem do przygotowania zasobów chmurowych, np., z
 
 1. Utwórz wirtualną maszynę za pomoca TF.
 
-2. Zrób następujący tutorial: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-html-website-with-ansible-on-ubuntu-20-04-nginx
+2. Do pliku inventory, zapisz publiczny adres IP twojej maszyny wirtualnej.
+
+3. Zrób następujący tutorial: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-html-website-with-ansible-on-ubuntu-20-04-nginx 
 
 ## Docker - narzędzia
 
