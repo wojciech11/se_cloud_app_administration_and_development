@@ -1,5 +1,13 @@
 # Summary
 
+## Production Readiness && Pre-mortems
+
+TBA
+
+## Runbook
+
+TBA
+
 ## Oncall
 
 Small / medium company:
@@ -16,8 +24,6 @@ Tools:
 TODO: training, ...
 
 see [Practice of Cloud System Administration vol2](https://www.amazon.com/Practice-Cloud-System-Administration-Practices/dp/032194318X).
-
-## Runbook
 
 ## Incident Management
 
