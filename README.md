@@ -37,7 +37,7 @@
    - Ansible
    - Dedicated tools
 
-5. Podsumowanie i Egzamin:
+5. Podsumowanie i Egzamin - [slides](05_slides/):
 
    - runbooks
    - onCall
