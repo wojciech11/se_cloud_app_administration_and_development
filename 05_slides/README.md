@@ -4,13 +4,13 @@ SRE as an enabling team (contrary to the Google approach). Long live DevOps as c
 
 ## Production Readiness && Pre-mortems
 
-Checklist for checking that new code is prodution ready:
+Checklist for checking that new code is production ready:
 
 1. Do we have enough observability for the onCall and operating the component?
 2. 2-3 scenarios for things that may go wrong ([pre-mortem](https://en.wikipedia.org/wiki/Pre-mortem))
 3. ...
 
-## Runbook
+## Runbooks
 
 TBA
 
