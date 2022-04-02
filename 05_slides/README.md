@@ -1,5 +1,7 @@
 # Summary
 
+SRE as an enabling team (contrary to the Google approach). Long live DevOps as culture and approach!
+
 ## Production Readiness && Pre-mortems
 
 TBA
