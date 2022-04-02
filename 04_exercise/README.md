@@ -182,9 +182,9 @@ Ansible jest popularnym narzędziem do przygotowania zasobów chmurowych, np., z
 
 2. Zrób następujący tutorial: https://www.digitalocean.com/community/tutorials/how-to-deploy-a-static-html-website-with-ansible-on-ubuntu-20-04-nginx
 
-## Docker - nardzędzia
+## Docker - narzędzia
 
-- dockerfile lint:
+- dockerfile lint - [hadolint](https://github.com/hadolint/hadolint):
 
   ```bash
   docker run --rm -i hadolint/hadolint Dockerfile
@@ -192,7 +192,7 @@ Ansible jest popularnym narzędziem do przygotowania zasobów chmurowych, np., z
   find . -iname Dockerfile | xargs -I {} bash -c "echo {}; docker run --rm -i hadolint/hadolint < {}"
   ```
 
-- trivy:
+- [trivy](https://github.com/aquasecurity/trivy):
 
   ```bash
   # zeskanujmy stary obraz dockera
