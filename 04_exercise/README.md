@@ -124,7 +124,7 @@
 7. A co z jakością naszego Terraforma? `tflint` przychodzi z pomocą. Możemy zainstalować krok po kroku, jak to jest opisane na [githubie projektu](docker pull ghcr.io/terraform-linters/tflint-bundle:latest), albo skorzystać z dockera:
 
    
-  Utwórz plik konfiguracyjny dla tflinta:
+   Utwórz plik konfiguracyjny dla tflinta:
 
    ```terraform
    plugin "azurerm" {
