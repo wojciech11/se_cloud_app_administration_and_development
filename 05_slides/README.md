@@ -55,12 +55,21 @@ After:
 
 Best Practices:
 
-- Prioritise: Stop the bleeding, restore service, and preserve the evidence for root-causing.
-- see: [sre books on managing incidents](https://sre.google/sre-book/managing-incidents/)
+- Prioritise: Stop the bleeding, restore service, and preserve the evidence for root-causing,
+- Clear communication and hand-offs,
+- see: [sre books on managing incidents](https://sre.google/sre-book/managing-incidents/).
 
 ## Postmortem
 
-xyz
+Best practices:
+
+1. Have a template document for all your Postmortem
+2. Pick a facilitator, possibly person who was not involved
+3. Do the postmortem in up to 1 weeks (max 1.5).
+4. Do blameless postmortem,
+5. Assign responsible persons for each of the action items.
+
+see: https://www.atlassian.com/incident-management/postmortem/blameless
 
 ## References
 
