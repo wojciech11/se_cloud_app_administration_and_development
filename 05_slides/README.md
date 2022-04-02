@@ -20,8 +20,8 @@ Small / medium company:
 
 Tools:
 
-- Opsgenie
-- Pagerduty
+- [Opsgenie](https://www.atlassian.com/software/opsgenie)
+- [Pagerduty](https://www.pagerduty.com/)
 
 TODO: training, ...
 
