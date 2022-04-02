@@ -40,8 +40,8 @@ After:
 
 Best Practices:
 
-- see: https://sre.google/sre-book/managing-incidents/
-- Prioritize: Stop the bleeding, restore service, and preserve the evidence for root-causing.
+- see: [sre books on managing incidents](https://sre.google/sre-book/managing-incidents/)
+- Prioritise: Stop the bleeding, restore service, and preserve the evidence for root-causing.
 
 ## Postmortem
 
