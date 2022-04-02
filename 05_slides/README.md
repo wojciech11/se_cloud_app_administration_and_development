@@ -2,9 +2,7 @@
 
 ## Oncall
 
-
 ## Runbook
-
 
 ## Incident Management
 
@@ -18,7 +16,7 @@ flowchart
 
 Roles:
 
-- Incident Commander (IC) - "the commander holds all positions that they have not delegated. If appropriate, they can remove roadblocks that prevent Ops from working most effectively" ([sre book](https://www.atlassian.com/incident-management/incident-response/incident-commander#3-duties-of-an-incident-commander)).
+- Incident Commander (IC) - "the commander holds all positions that they have not delegated. If appropriate, they can remove roadblocks that prevent Ops from working most effectively" ([sre book](https://www.atlassian.com/incident-management/incident-response/incident-commander#3-duties-of-an-incident-commander)). IC has super powers.
 
 - Communication Manager (CM) -  manages communications, periodically updates about the incident to the other teams, stakeholders, and clients (directly or indirectly). The communication could be done by email, slack, or a [statuspage](https://spacelift.statuspage.io).
 
@@ -40,8 +38,8 @@ After:
 
 Best Practices:
 
-- see: [sre books on managing incidents](https://sre.google/sre-book/managing-incidents/)
 - Prioritise: Stop the bleeding, restore service, and preserve the evidence for root-causing.
+- see: [sre books on managing incidents](https://sre.google/sre-book/managing-incidents/)
 
 ## Postmortem
 
