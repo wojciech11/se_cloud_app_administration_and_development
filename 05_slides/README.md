@@ -2,6 +2,15 @@
 
 SRE as an enabling team (contrary to the Google approach). Long live DevOps as culture and approach!
 
+Ops and Oncall:
+
+1. Design document
+2. Production Readiness and Pre-mortems
+3. Runbooks
+4. OnCall
+5. Post-mortems
+6. Continuous improvements
+
 ## Production Readiness && Pre-mortems
 
 Checklist for checking that new code is production ready:
