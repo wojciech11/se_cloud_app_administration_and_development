@@ -23,6 +23,23 @@ Checklist for checking that new code is production ready:
 
 TBA
 
+Best practices:
+
+- Do hands-on exercises, dry runs, etc.
+
+
+Types:
+
+- manual
+- semi-manual
+- automatic
+
+Tools:
+
+- Ansible, custom Kubernetes operator, manual (with copy&paste commands) instructions
+- https://backstage.io/ 
+- https://www.rundeck.com/open-source
+
 ## Oncall
 
 Small / medium company:
@@ -96,7 +113,13 @@ see: https://www.atlassian.com/incident-management/postmortem/blameless
 
 - https://uptime.is/
 
+## Related topics
+
+- Business Continuity Plan
+- Disaster recovery (RTO and RPO)
+
 ## References
 
 - https://sre.google/sre-book/managing-incidents/
 - https://www.atlassian.com/incident-management/incident-response/incident-commander#3-duties-of-an-incident-commander
+- https://wa.aws.amazon.com/wellarchitected/2020-07-02T19-33-23/wat.concept.runbook.en.html
