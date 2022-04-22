@@ -42,6 +42,8 @@
    - runbooks
    - onCall
    - incident management
+   - SLA/SLI/SLO
+   - ...
 
 ## Materiały dodatkowe
 
