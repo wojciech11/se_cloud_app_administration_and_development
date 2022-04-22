@@ -19,14 +19,60 @@ Checklist for checking that new code is production ready:
 2. 2-3 scenarios for things that may go wrong ([pre-mortem](https://en.wikipedia.org/wiki/Pre-mortem))
 3. ...
 
-## Runbooks
+## SLA & Uptime
 
-TBA
+### Uptime
+
+When your service works and when it does not:
+
+- https://uptime.is/
+
+### SLA/SLO/SLI
+
+---
+| Abbr  | Name  | Description |
+| ----- | ----- | ----------- |
+| SLA   | Service Level Agreement | what we promise to customer, possibly a penalty if not met |
+| SLO   | Service Level Objective | what we promise to ourselves, what we see as our objective, SLO >= SLA |
+| SLI   | Service Level Indicator | What we measure to say our system is available |
+---------
+
+Example:
+
+```text
+99.95% of well-formed queries correctly processed under 500 ms
+```
+
+Remember:
+
+**Measure at the system boundaries** and **focus on the customer/consumer experience**.
+
+### Tools
+
+- Prometheus/Grafana
+- Datadog / Newrelic
+- statuscake
+- Opsgenie
+
+### Additional Reading materials
+
+- https://cloud.google.com/blog/products/devops-sre/availability-part-deux-cre-life-lessons
+- [SRE fundamentals 2021: SLIs vs SLAs vs SLOs](https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-sli-vs-slo-vs-sla)
+- [how to define SLI and SLO by newrelic](https://newrelic.com/blog/best-practices/best-practices-for-setting-slos-and-slis-for-modern-complex-systems)
+- https://www.atlassian.com/incident-management/kpis/sla-vs-slo-vs-sli
+
+## Error budget
+
+Goal: go fast but slow down when there is a tight corner.
+
+- Shall we speed up? We did not have any incident, we can move faster.
+- Shall we slow down? E.g., two incident, close to violate/or not delivering our SLA, we slow down.
+
+## Runbooks
 
 Best practices:
 
 - Do hands-on exercises, dry runs, etc.
-
 
 Types:
 
@@ -37,8 +83,10 @@ Types:
 Tools:
 
 - Ansible, custom Kubernetes operator, manual (with copy&paste commands) instructions
-- https://backstage.io/ 
+- https://backstage.io/
 - https://www.rundeck.com/open-source
+- platforms for IaC, for example, [Spacelift](https://spacelift.io/)
+- docs, e.g., [archbee](https://www.archbee.io/)
 
 ## Oncall
 
@@ -46,16 +94,45 @@ Small / medium company:
 
 1. Level1
 2. Level2
-3. Whole team
+3. Whole engineering team
+
+```mermaid
+flowchart TD
+  a(alert) -- wakes up -->l1(L1)
+  l1 -- 20 min without ack / or triggered by L1 --> l2(L2)
+  l2 -- 20 min without ack / or triggered --> l3(Escalation)
+```
+
+Important:
+
+1. Training
+2. Runbooks
+3. Dry of hands-on drills
+4. Resilience/failover/graceful degradation is a part of the feature design
+5. Implement the action items from post-mortems
 
 Tools:
 
 - [Opsgenie](https://www.atlassian.com/software/opsgenie)
 - [Pagerduty](https://www.pagerduty.com/)
 
-TODO: training, ...
-
 see [Practice of Cloud System Administration vol2](https://www.amazon.com/Practice-Cloud-System-Administration-Practices/dp/032194318X).
+
+## Categorizaton of bug/incident
+
+ ---
+| Impact  |       |
+| ------- | ----- |
+| P1      |  business dow situation or high financial impact, client unable to operate                                               |
+| P2      | A major component of the clients’ ability to operate is affected.<br /> Some aspects of the business can continue but its a major problem.  |
+| P3      | issue is affecting efficient operation by one or more people. Core not affected |
+| P4      | inconvenience or annoying, a walkaround exists |
+ ---------
+
+* P1 detected and needs to be adressed
+* P2 if detected, addressing it might start during the business hours
+* P3
+* P4
 
 ## Incident Management
 
@@ -108,10 +185,6 @@ Best practices:
 5. Assign responsible persons for each of the action items.
 
 see: https://www.atlassian.com/incident-management/postmortem/blameless
-
-## SLA & Uptime
-
-- https://uptime.is/
 
 ## Related topics
 
