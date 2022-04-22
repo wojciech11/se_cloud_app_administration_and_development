@@ -68,6 +68,8 @@ Goal: go fast but slow down when there is a tight corner.
 - Shall we speed up? We did not have any incident, we can move faster.
 - Shall we slow down? E.g., two incident, close to violate/or not delivering our SLA, we slow down.
 
+We track SLA vs SLIs to tell us where we are.
+
 ## Runbooks
 
 Best practices:
@@ -85,8 +87,9 @@ Tools:
 - Ansible, custom Kubernetes operator, manual (with copy&paste commands) instructions
 - https://backstage.io/
 - https://www.rundeck.com/open-source
-- platforms for IaC, for example, [Spacelift](https://spacelift.io/)
-- docs, e.g., [archbee](https://www.archbee.io/)
+- platforms for continuous deployment of IaC, e.g., [Spacelift](https://spacelift.io/)
+- platforms for continuous deployment of software, e.g., gitlab
+- docs/internal wiki, e.g., [archbee](https://www.archbee.io/) or [notion.so](https://www.notion.so)
 
 ## Oncall
 
