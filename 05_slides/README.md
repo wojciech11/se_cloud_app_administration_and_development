@@ -106,6 +106,12 @@ flowchart TD
   l2 -- 20 min without ack / or triggered --> l3(Escalation)
 ```
 
+Difference:
+
+- time to ACK
+- time to ACT
+- time to inform customers with the statuspage
+
 Important:
 
 1. Training
@@ -118,10 +124,11 @@ Tools:
 
 - [Opsgenie](https://www.atlassian.com/software/opsgenie)
 - [Pagerduty](https://www.pagerduty.com/)
+-  Status.io or [statuspage](https://www.atlassian.com/software/statuspage), e.g.., https://spacelift.statuspage.io
 
 see [Practice of Cloud System Administration vol2](https://www.amazon.com/Practice-Cloud-System-Administration-Practices/dp/032194318X).
 
-## Categorizaton of bug/incident
+## Categorization of bug/incident
 
  ---
 | Impact  |       |
@@ -132,10 +139,17 @@ see [Practice of Cloud System Administration vol2](https://www.amazon.com/Practi
 | P4      | inconvenience or annoying, a walkaround exists |
  ---------
 
-* P1 detected and needs to be adressed
+* P1 detected and needs to be addressed
 * P2 if detected, addressing it might start during the business hours
 * P3
 * P4
+
+Commitment to customers (common in contracts with enterprises):
+
+1. How fast they are notified about the incident,
+2. Time to stop bleeding / finding workaround
+3. Time for fixing the issue
+4. Response time to customer tickets
 
 ## Incident Management
 
