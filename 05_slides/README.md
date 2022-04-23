@@ -137,7 +137,8 @@ Difference:
 
 - time to ACK
 - time to ACT
-- time to inform customers with the statuspage
+- time to inform customers, e.g., with the statuspage
+- interval of updates on the progress
 
 Important:
 
@@ -158,7 +159,7 @@ see [Practice of Cloud System Administration vol2](https://www.amazon.com/Practi
 ## Classification of incident/issue/bug
 
  ---
-| Impact  |       |
+| Impact  |  Description     |
 | ------- | ----- |
 | P1      |  business dow situation or high financial impact, client unable to operate                                               |
 | P2      | A major component of the clients’ ability to operate is affected.<br /> Some aspects of the business can continue but its a major problem.  |
