@@ -222,7 +222,10 @@ Best Practices:
 ## Related topics
 
 - Business Continuity Plan
-- Disaster recovery (RTO and RPO)
+- Disaster recovery (see [RTO and RPO](https://www.beyond.pl/baza-wiedzy/poradniki/rto-rpo-disaster-recovery/)):
+
+  - RTO - Recovery Time Objective
+  - RPO - Recovery Point Objective
 
 ## References
 
