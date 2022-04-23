@@ -26,7 +26,7 @@ Production Readiness - checklist for checking that new code is production ready:
 
 1. Do we have enough observability for the onCall and operating the component?
    - monitoring dashboards,
-   - alerts
+   - alerts,
    - logging,
    - training.
 
