@@ -179,6 +179,10 @@ Commitment to customers (common in contracts with enterprises):
 3. Time for fixing the issue
 4. Response time to customer tickets
 
+Hint.
+
+Here helps to release certain functionality as apha or RC or behind feature flags to most friendly customers to be able to move faster.
+
 ## Incident Management
 
 Incident management skills and practices exist to channel the energies of enthusiastic individuals.
