@@ -2,7 +2,7 @@
 
 [Instrukcja](https://github.com/wojciech11/cloud_dev_tools_and_platforms/blob/master/01_exercise/manual.md):
 
-- https://azure.microsoft.com/en-us/free/ i zaloguj się za pomocą konta WSB
+- https://azure.microsoft.com/en-us/free/students/ i zaloguj się za pomocą konta WSB
 - praca z Ubuntu,
 - utworzenie wirualnej maszyny, upewnienie się, że konto na Azure jest aktywne.
 
