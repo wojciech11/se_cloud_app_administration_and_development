@@ -19,7 +19,7 @@
 
 ## Kurs
 
-1. Omówienie projektów - [wykład](01_slides/index.pdf)
+1. Omówienie projektów - [wykład](01_slides/index.pdf) / [powtórka](01_exercise/README.md)
 
 2. Co to jest administracja i observability? - [ćwiczenia](02_exercise/README.md) / [slajdy](02_slides/index.pdf):
 
